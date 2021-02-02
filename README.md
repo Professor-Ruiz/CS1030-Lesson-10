@@ -52,7 +52,7 @@ There is a total of 20 points possible for this assignment:
 | Criteria | Points Possible |
 |-|-|
 | Docstring:<br>- is at the top of the program, <br>- is formatted exactly as the example, and<br>- contents have been edited by student. | 1 |
-| Submission:<br>Assignment files were submitted properly via GitHub:<br>- exercise.py<br>- lesson10flowchart.jpg | 1 |
+| Submission:<br>Assignment files were submitted properly via GitHub | 1 |
 | Identifiers:<br>- use snake case, and<br>- are descriptive of the data it is assigned.<br>[PEP8 Naming Conventions](https://www.python.org/dev/peps/pep-0008/#naming-conventions) | 1 |
 | Formatting:<br>- follows the example in the directions. | 1 |
 | Comments:<br>- implemented in program<br>- clearly describe code purpose<br>- follow PEP8 guidelines<br>[PEP8 Comments](https://www.python.org/dev/peps/pep-0008/#comments) | 1 |
