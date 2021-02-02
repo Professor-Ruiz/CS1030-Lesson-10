@@ -8,4 +8,4 @@ Add your flowchart to this directory.
 ## Directions
 - [Creating and adding flowcharts to GitHub](https://youtu.be/oy5nhA7QpNI)
 ## Example Flowchart
-   ![Example Flowchart](/assets/lessonXflowchart.jpg)
+   ![Example Flowchart](/assets/example-flowchart.jpg)
