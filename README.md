@@ -1,6 +1,6 @@
 ## Objectives
-- Practice using conditionals to solve problems.
-- Learn how to create flowcharts, and upload them in your assignment repositories.
+- Formulate a working solution to a business problem that incorporates the use of conditionals.
+- Construct a flowchart that demonstrates the logic of an algorithm.
 
 ## Directions
 - Design a program that accepts three strings in any order, and prints them in ascending alphabetical order to the console. The only data types allowed are strings (no lists). You cannot use looping or any predefined function or method.
@@ -10,6 +10,7 @@
     - I created an [instructional video](https://youtu.be/oy5nhA7QpNI) for creating and submitting flowcharts.
     
 - Format the user prompt and output exactly as shown in the example below:
+
   ```
   Enter flavor one: Snickerdoodle Cupcake
   Enter flavor two: Biscoff Lava
