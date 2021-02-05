@@ -2,10 +2,10 @@ import pytest
 import src.exercise
 
 inp_1 = ["Snickerdoodle Cupcake","Biscoff Lava","Pumpkin Chocolate Chip"]
-out_1 = '\nBiscoff Lava\nPumpkin Chocolate Chip\nSnickerdoodle Cupcake\n'
+out_1 = ['Biscoff Lava','Pumpkin Chocolate Chip','Snickerdoodle Cupcake']
 
 inp_2 = ["Lemon Glaze","Confetti Cake","Reese's Peanut Butter Chip"]
-out_2 = "\nConfetti Cake\nLemon Glaze\nReese's Peanut Butter Chip\n"
+out_2 = ["Confetti Cake","Lemon Glaze","Reese's Peanut Butter Chip"]
 
 # run the test function for each input/output pair
 @pytest.mark.parametrize("test_input, expected", [(inp_1, out_1), (inp_2, out_2)])
@@ -19,6 +19,11 @@ def test_capture_stdout(capsys, test_input, expected):
     # Execute the student program, and capture the output (print statements):
     src.exercise.main()
     out, err = capsys.readouterr()
+    
+    # Reformat program output as a list of strings.
+    # Each line of output will be a list element, excluding blank newlines.
+    out = out.strip().split('\n')
+    out = [i for i in out if i]
     
     # Test the actual program output against the anticipated program output:
     assert out == expected
