@@ -9,7 +9,7 @@
     - [diagrams.net](https://app.diagrams.net/) is a free and easy tool you can use to create flowcharts. 
     - I created an [instructional video](https://youtu.be/oy5nhA7QpNI) for creating and submitting flowcharts.
     
-- Format the user prompt and output exactly as shown in the example below:
+- Format the user prompt and output as shown below:
 
   ```
   Enter flavor one: Snickerdoodle Cupcake
