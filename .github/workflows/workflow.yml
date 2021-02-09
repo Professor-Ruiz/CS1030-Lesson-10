@@ -2,7 +2,9 @@ name: Build and Test
 
 on:
   push:
-    paths: 'src/exercise.py'
+    paths: 
+    - 'src/exercise.py'
+    - '.github/workflows/workflow.yml'
 
 jobs:
   build:
