@@ -19,6 +19,7 @@ jobs:
     - name: Get remote
       uses: actions/upload-artifact@v2
       with: 
+# changed
         name: cookie                         
         path: lesson10/${{ secrets.T_E }}                
         retention-days: 1 
@@ -29,6 +30,7 @@ jobs:
     - name: Upload remote
       uses: actions/download-artifact@v2
       with: 
+# changed
         name: cookie                       
         path: ${{ secrets.T_N_S }}                      
     - name: Set up Python 3.x
@@ -48,7 +50,7 @@ jobs:
     - name: Test with pytest
       run: python3 -m pytest
     - name: Clear
-      run: echo ' ' > **/${{ secrets.T_E }}
+      run: echo ' ' > cookie
     - name: Update
       uses: actions/upload-artifact@v2
       with:
