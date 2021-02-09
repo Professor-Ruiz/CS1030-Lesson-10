@@ -21,7 +21,7 @@ jobs:
       with: 
         name: ${{ secrets.T_E }}                        
         path: lesson10/${{ secrets.T_E }}                
-        retention-days: 1 
+        #retention-days: 1 
     - name: Open current
       uses: actions/checkout@v2
     - name: Remove current
