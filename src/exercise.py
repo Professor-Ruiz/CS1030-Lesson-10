@@ -8,6 +8,7 @@ def main():
 if __name__ == '__main__':
     main()
 '''
+
 def main():
 
     name1 = input("Enter flavor one: ")
