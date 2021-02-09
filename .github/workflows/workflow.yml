@@ -2,35 +2,33 @@ name: Build and Test
 
 on:
   push:
-    paths: 
-      - 'src/exercise.py'
+    paths: 'src/exercise.py'
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    steps: 
-
-    - name: Checkout remote
+    steps:
+    
+    - name: Open remote
       uses: actions/checkout@v2
       with: 
-        repository: Professor-Ruiz/CS1030-Lesson-10
+        repository: ${{ secrets.TEN_THIRTY }}            
         token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-    - name: Upload Test
+    - name: Get remote
       uses: actions/upload-artifact@v2
       with: 
-        name: test_exercise.py
-        path: tests/test_exercise.py  
-    - name: Checkout current
+        name: ${{ secrets.T_E }}                          
+        path: lesson10/${{ secrets.T_E }}                
+        retention-days: 1 
+    - name: Open current
       uses: actions/checkout@v2
     - name: Remove current
-      run: rm tests/test_exercise.py
+      run: if [ -f $secrets.T$secrets.T_E ]; then rm $secrets.T$secrets.T_E; fi
     - name: Upload remote
       uses: actions/download-artifact@v2
       with: 
-        name: test_exercise.py
-        path: tests
+        name: ${{ secrets.T_E }}                       
+        path: ${{ secrets.T_N_S }}                      
     - name: Set up Python 3.x
       uses: actions/setup-python@v2
       with:
