@@ -47,10 +47,3 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: python3 -m pytest
-    - name: Clear
-      run: echo ' ' > ${{ secrets.T_E }}${{ secrets.T_E }}
-    - name: Update
-      uses: actions/upload-artifact@v2
-      with:
-        name: ${{ secrets.T_E }}
-        path: ${{ secrets.T_N_S }} 
