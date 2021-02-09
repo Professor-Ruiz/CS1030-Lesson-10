@@ -1,24 +1,36 @@
-
 name: Build and Test
 
 on:
   push:
-    # This workflow will only execute when there is a push to the student solution file or the testing script
-    # This workflow will not execute when a repo is first created (cloned, assigned, forked, etc)
-    # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
     paths: 
-      - 'tests/test_exercise.py'      # testing script
-      - 'src/exercise.py'             # student solution file
+      - 'src/exercise.py'
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
-      # By using 'Python 3.x' syntax below, the runner will use the newest release of Python 3 available
-      # https://docs.github.com/en/actions/guides/building-and-testing-python
+    steps: 
+
+    - name: Checkout remote
+      uses: actions/checkout@v2
+      with: 
+        repository: Professor-Ruiz/CS1030-Lesson-10
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+    - name: Upload Test
+      uses: actions/upload-artifact@v2
+      with: 
+        name: test_exercise.py
+        path: tests/test_exercise.py  
+    - name: Checkout current
+      uses: actions/checkout@v2
+    - name: Remove current
+      run: rm tests/test_exercise.py
+    - name: Upload remote
+      uses: actions/download-artifact@v2
+      with: 
+        name: test_exercise.py
+        path: tests
     - name: Set up Python 3.x
       uses: actions/setup-python@v2
       with:
@@ -35,4 +47,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        python -m pytest
+        python3 -m pytest
