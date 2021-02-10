@@ -3,12 +3,12 @@
 - Construct a flowchart that demonstrates the logic of an algorithm.
 
 ## Directions
-- Design a program that accepts three strings in any order, and prints them in ascending alphabetical order to the console. The only data types allowed are strings (no lists). You cannot use looping or any predefined function or method.
-
 - Develop your algorithm before writing any code. Create a flowchart to illustrate your logic.
     - [diagrams.net](https://app.diagrams.net/) is a free and easy tool you can use to create flowcharts. 
     - I created an [instructional video](https://youtu.be/oy5nhA7QpNI) for creating and submitting flowcharts.
     
+- Design a program that accepts three strings in any order, and prints them in ascending alphabetical order to the console. The only data types allowed are strings (no lists). You cannot use looping or any predefined function or method.
+   
 - Format the user prompt and output as shown below:
 
   ```
