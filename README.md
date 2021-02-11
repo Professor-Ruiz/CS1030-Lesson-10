@@ -1,3 +1,8 @@
+# Lesson 10 Programming Assignment
+
+![](assets/crumbl.png)
+> Every week, Crumbl rotates at least three specialty cookies on their menu. They'd like to display these cookies alphabetically on their menu. Write a program to help them out with this.
+
 ## Objectives
 - Formulate a working solution to a business problem that incorporates the use of conditionals.
 - Construct a flowchart that demonstrates the logic of an algorithm.
