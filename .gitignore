@@ -1,0 +1,4 @@
+# Exclude everythng except the src directory
+
+/*
+!/src
